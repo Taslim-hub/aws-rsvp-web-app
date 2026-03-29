@@ -11,6 +11,8 @@ Users can submit RSVP responses in real time, and the response count updates ins
 
 The project demonstrates a full-stack cloud architecture using CDN, serverless computing, and both SQL and NoSQL databases.
 
+This project was initially based on a tutorial, with additional hands-on implementation, debugging, and deployment carried out independently. I worked on understanding the complete architecture, fixing data inconsistencies, and ensuring real-time updates.
+
 ---
 
 ## 🛠️ Technologies Used
@@ -59,6 +61,34 @@ User → CloudFront → S3 → API Gateway → Lambda → DynamoDB / RDS
 - CloudFront caching and content delivery
 - Debugging cloud applications using CloudWatch
 
+---
+
+## 📂 Project Structure
+
+```
+aws-rsvp-web-app/
+│
+├── frontend/
+│ ├── index.html # Main UI
+│ ├── style.css # Styling
+│ ├── app.js # Entry script (loads events)
+│ ├── events.js # Event logic + modal + RSVP
+│ └── utils.js # API helpers & formatters
+│
+├── lambda/
+│ ├── index.js # Lambda backend handler
+│ ├── package.json
+│ ├── package-lock.json
+│ └── node_modules
+├── docs/
+│ └── database-notes.txt # SQL commands
+│
+├── architecture/
+│ └── diagram.png
+│
+└── README.md
+This structure separates frontend, backend (Lambda), documentation, and architecture for better clarity and maintainability.
+```
 ---
 
 ## 📸 Screenshots
